@@ -4,4 +4,4 @@
 *🚧development in progress*
 
 ## Contribute!
-See the [Developer Guide](https://github.com/UMJI-SSTIA/ji-sstia-pages/developer-guide.md)
+See the [Developer Guide](https://github.com/UMJI-SSTIA/ji-sstia-pages/blob/master/developer-guide.md)
