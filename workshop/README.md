@@ -1,2 +1,2 @@
-# Introduction
+# Workshop
 *🚧development in progress*
