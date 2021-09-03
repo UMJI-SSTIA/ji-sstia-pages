@@ -8,4 +8,6 @@
         * [裁判团](proj-me-contest/guide/judge.md)
         * [财务处](proj-me-contest/guide/finance.md)
     * [档案馆](proj-me-contest/archive/README.md)
+        * [2021SP](proj-me-contest/archive/2021SP/README.md)
+            * [赛题brainstorm](proj-me-contest/archive/2021SP/1-brainstorm.md)
 * [Workshop](workshop/README.md)
