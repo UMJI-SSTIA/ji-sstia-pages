@@ -9,5 +9,7 @@
         * [财务处](proj-me-contest/guide/finance.md)
     * [档案馆](proj-me-contest/archive/README.md)
         * [2021SP](proj-me-contest/archive/2021SP/README.md)
-            * [赛题brainstorm](proj-me-contest/archive/2021SP/1-brainstorm.md)
+            * [整体规划](proj-me-contest/archive/2021SP/guideline.md)
+            * [赛题brainstorm](proj-me-contest/archive/2021SP/brainstorm.md)
 * [Workshop](workshop/README.md)
+* [TODO](misc/todo.md)
