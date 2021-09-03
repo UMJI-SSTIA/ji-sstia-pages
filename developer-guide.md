@@ -15,6 +15,9 @@ In order to contribute, you may:
 See ji-sstia.gitbook.io/ji-sstia/
 
 ## Local Build
+- Source: [link](https://github.com/GitbookIO/gitbook)
+- Config guide: [link](https://github.com/GitbookIO/gitbook/blob/master/docs/config.md)
+
 If you would like to test locally:
 
 ### Environment Setup
