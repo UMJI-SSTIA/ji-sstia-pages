@@ -1,6 +1,6 @@
 # Table of Contents
 
-* [Introduction](README.md)
+* [简介](INTRO.md)
 * [机械赛](proj-me-contest/README.md)
     * [简介](proj-me-contest/intro/README.md)
     * [筹备指南](proj-me-contest/guide/README.md)
