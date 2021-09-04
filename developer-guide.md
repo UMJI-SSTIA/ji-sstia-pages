@@ -1,18 +1,30 @@
 # SSTIA-Archive
-*🚧development in progress*
+
+- [Intro](intro)
+- [Gitbook Deployment](gitbook-deployment)
+- [Local Build](local-build) (*not recommended, only for functional testing*)
+    - [Environment Setup](environment-setup)
+    - [Workflow](workflow)
 
 ## Intro
 A repo that served as an archive site for the organization UMJI-SSTIA.
 
 In order to contribute, you may:
+
 - If you have push access to this repo, simply clone this repo, edit the corresponding content, create a commit and push to the master branch. The Gitbook service will automatically fetch your commit and refresh building.
 - Otherwise, you may either:
     - log in as `ji-sstia`, or
     - create pull request, or
-    - send your patch to `ji_sstia@163.com`
+    - send your patch to `ji_sstia@163.com`, or
+    - raise an issue in [https://github.com/UMJI-SSTIA/ji-sstia-pages/issues](https://github.com/UMJI-SSTIA/ji-sstia-pages/issues) and describe your changes
+
+If you would like to add a new page, you may:
+
+1. create a new markdown file in a suitable subdirectory
+2. index the file in `SUMMARY.md` following existed examples
 
 ## Gitbook Deployment
-See ji-sstia.gitbook.io/ji-sstia/
+The content is deployed automatically on [ji-sstia.gitbook.io/sstia](ji-sstia.gitbook.io/sstia). It fetches the `master` branch of [https://github.com/UMJI-SSTIA/ji-sstia-pages](https://github.com/UMJI-SSTIA/ji-sstia-pages) automatically.
 
 ## Local Build
 - Source: [link](https://github.com/GitbookIO/gitbook)
