@@ -17,6 +17,7 @@
             * [赛题brainstorm](proj-me-contest/archive/2021SP/brainstorm.md)
             * [媒体组brainstorm](proj-me-contest/archive/2021SP/media.md)
 * [Workshop](workshop/README.md)
+    * [Solidworks](workshop/SolidWorks.md)
 * [MISC](developer-guide.md)
     * [TODO](misc/todo.md)
     * [Dev](developer-guide.md)
