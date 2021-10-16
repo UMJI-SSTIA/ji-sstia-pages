@@ -1,10 +1,10 @@
-# MISC
+# Dev
 
-* [Intro](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/577cede8af4b0fdbf86fb5622279d61cef7011a5/intro/README.md)
-* [Gitbook Deployment](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/577cede8af4b0fdbf86fb5622279d61cef7011a5/gitbook-deployment/README.md)
-* [Local Build](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/577cede8af4b0fdbf86fb5622279d61cef7011a5/local-build/README.md) (_not recommended, only for functional testing_)
-  * [Environment Setup](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/577cede8af4b0fdbf86fb5622279d61cef7011a5/environment-setup/README.md)
-  * [Workflow](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/577cede8af4b0fdbf86fb5622279d61cef7011a5/workflow/README.md)
+* [Intro](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/c6f82166ad922af81fc8bb3e54a9ebfeecef49f4/intro/README.md)
+* [Gitbook Deployment](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/c6f82166ad922af81fc8bb3e54a9ebfeecef49f4/gitbook-deployment/README.md)
+* [Local Build](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/c6f82166ad922af81fc8bb3e54a9ebfeecef49f4/local-build/README.md) (_not recommended, only for functional testing_)
+  * [Environment Setup](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/c6f82166ad922af81fc8bb3e54a9ebfeecef49f4/environment-setup/README.md)
+  * [Workflow](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/c6f82166ad922af81fc8bb3e54a9ebfeecef49f4/workflow/README.md)
 
 ## Intro
 
@@ -26,7 +26,7 @@ If you would like to add a new page, you may:
 
 ## Gitbook Deployment
 
-The content is deployed automatically on [ji-sstia.gitbook.io/sstia](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/577cede8af4b0fdbf86fb5622279d61cef7011a5/ji-sstia.gitbook.io/sstia/README.md). It fetches the `master` branch of [https://github.com/UMJI-SSTIA/ji-sstia-pages](https://github.com/UMJI-SSTIA/ji-sstia-pages) automatically.
+The content is deployed automatically on [ji-sstia.gitbook.io/sstia](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/c6f82166ad922af81fc8bb3e54a9ebfeecef49f4/ji-sstia.gitbook.io/sstia/README.md). It fetches the `master` branch of [https://github.com/UMJI-SSTIA/ji-sstia-pages](https://github.com/UMJI-SSTIA/ji-sstia-pages) automatically.
 
 ## Local Build
 
