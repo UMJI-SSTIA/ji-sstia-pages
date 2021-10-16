@@ -23,6 +23,7 @@ If you would like to add a new page, you may:
 
 1. create a new markdown file in a suitable subdirectory
 2. index the file in `SUMMARY.md` following existed examples
+-  *(Just see the arrangement of the files and you will understand.)*
 
 ## Gitbook Deployment
 
