@@ -18,6 +18,8 @@
             * [媒体组brainstorm](proj-me-contest/archive/2021SP/media.md)
 * [Workshop](workshop/README.md)
     * [Solidworks](workshop/SolidWorks.md)
+* [Notes](notes/README.md)
 * [MISC](developer-guide.md)
     * [TODO](misc/todo.md)
     * [Dev](developer-guide.md)
+
