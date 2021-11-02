@@ -5,5 +5,7 @@
 
 *No panic, no torture, just* ***Have Fun!!!***
 
+
 ## Useless link
 - [https://xkcd.com/](https://xkcd.com/) *(Every scientist or engineer should know this website. —— Horst Harold Hohberger)*
+<div align=center><img src="../image/the_general_problem.png" width="500"></div>
