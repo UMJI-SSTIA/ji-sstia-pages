@@ -9,5 +9,5 @@
 
 
 
-<div style="position:fixed;bottom:50px"><i>Tis nothing good or bad, but thinking makes it so. —— William Shakespeare</i></div>
+<div style="position:fixed;bottom:0px"><i>Tis nothing good or bad, but thinking makes it so. —— William Shakespeare</i></div>
 
