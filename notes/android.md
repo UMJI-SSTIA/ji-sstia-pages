@@ -6,5 +6,5 @@
 ## Useful links
 - Online course: [Udacity](https://classroom.udacity.com/courses/ud851https://classroom.udacity.com/courses/ud851) *(On this website you can also find some free courses other than android development.)*
 - [Android developer](https://developer.android.com/) *(need VPN)*
-- [Android 开发者](https://developer.android.google.cn/) *(A chinese version of android developer, no need of VPN)*
+- [Android 开发者](https://developer.android.google.cn/) *(A chinese version of Android Developer, no need of VPN)*
 - [Bing](https://cn.bing.com/) is way more useful than Baidu... *(Use Google if you can.)*
