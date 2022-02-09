@@ -1,4 +1,4 @@
-# Intel Flex FPGA Evaluation Guide [Draft 1]
+# FPGA Note for Gap
 
 This document is designed for beginners in FPGA board evaluation and related works. It covers some basic topics that need to be noticed when getting into implementation in Flex lab on FPGA. 
 
