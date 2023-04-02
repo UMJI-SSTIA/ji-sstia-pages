@@ -22,6 +22,7 @@
   * [VSCode](workshop/VSCode.md)
   * [learning1](workshop/c1.md)
   * [optimize](workshop/2023_3.md)
+  * [electric control](workshop/ec.md)
 * [Notes](notes/README.md)
   * [Android Development](notes/android.md)
 * [MISC](developer-guide.md)
