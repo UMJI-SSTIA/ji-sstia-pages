@@ -1,0 +1,99 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\graphicspath{{./img/}}
+
+\AtBeginSection[]{
+    \begin{frame}{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%% DIY 1: Complete, compile %%%%%%%%%%%%%%%%%%%%%%%
+\title{Very Pretty Beamer}
+\author{Your Name}
+\institute{JI}
+\date{2023}
+
+\begin{document}
+\frame{\titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% DIY 2: Multicolumn %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{$\Box\Box\Box\Box,\Box\Box\langle\langle\Box\Box\rangle\rangle$}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            You are right, but \LaTeX\ is a brand-new typesetting system
+            independently developed by Leslie Lamport. The system is based
+            on a language called ``\TeX'', which powers ``macro packages'',
+            to guide your writing. You will be the powerful role known as
+            the ``user'', reading documentation and using all kinds of
+            commands and environments; you will write impressive articles
+            and beamers — and in the meantime reveal the truth of ``\LaTeX''.
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \includegraphics[width=\textwidth]{genshin}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% DIY 3: Sections %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results and Measurements}
+\begin{frame}{Results and Measurements}
+\end{frame}
+\begin{frame}{Resonance Method}
+\end{frame}
+\begin{frame}{Phase Difference Method}
+\end{frame}
+
+\section{Uncertainty analysis}
+\begin{frame}{Uncertainty analysis}
+\end{frame}
+\begin{frame}{Resonance Method}
+\end{frame}
+\begin{frame}{Phase Difference Method}
+\end{frame}
+
+\section{Conclusions}
+\begin{frame}{Conclusions}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% DIY 4: Blocks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Blocks}
+    \begin{theorem}
+        \[
+            e^{i \theta} = \cos \theta + i \sin \theta
+        \]
+    \end{theorem}
+
+    \begin{corollary}
+        \[
+            e^{i \theta + \varphi} = e^\varphi (\cos \theta + i \sin \theta)
+        \]
+    \end{corollary}
+
+    \begin{example}
+        \[
+            e^{i \pi} = -1
+        \]
+    \end{example}
+
+    \begin{block}{Note}
+        In physics, the convention is $j$ because $i$ stands for current.
+    \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% DIY 5: Overlays %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Overlays}
+% Make this paragraph the only thing on the first slide
+Here at JI, we go international! \pause
+
+So let's say hello to the whole world: China, US, France, Germany,
+Korea, Japan…
+
+% Make items appear one by one in reverse order
+\begin{itemize}
+    \item<4-> \rotatebox[origin=c]{180}{in Australia!}
+    \item<3-> \rotatebox[origin=c]{180}{warmest greetings to our friends}
+    \item<2-> \rotatebox[origin=c]{180}{And we won't forget to send}
+\end{itemize}
+\end{frame}
+\end{document}

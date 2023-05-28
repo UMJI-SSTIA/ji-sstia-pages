@@ -1,0 +1,1 @@
+Seen [here.](https://github.com/UMJI-SSTIA/ji-sstia-pages/tree/master/workshop/Latex&Beamer "UMJI-SSITA-github")

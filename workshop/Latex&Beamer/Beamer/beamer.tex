@@ -1,0 +1,477 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\newenvironment{fragileframe}
+{\begin{frame}[fragile,environment=fragileframe]}
+{\end{frame}}
+
+\newenvironment{diy}[1]
+{\begin{block}{\textbf{DIY #1}}}
+{\end{block}}
+
+\setbeamertemplate{navigation symbols}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue
+}
+
+\urlstyle{same}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{wksp}{
+    language=[latex]tex, % format: [dialect]language
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+
+\lstset{style=wksp}
+
+\graphicspath{{./img/}}
+
+\AtBeginSection[]{
+    \begin{frame}{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\renewcommand{\tt}{\texttt}
+\renewcommand{\bf}{\textbf}
+
+\def\pre{1} % 1 to keep \pauses, 0 to skip
+
+\title{\LaTeX\ workshop: Beamers}
+\author{Frederick Yin}
+\institute{TechJI}
+\date{2023}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{Overview}
+\begin{frame}{Why \tt{beamer}?}
+\begin{columns}
+    \begin{column}{0.4\textwidth}
+        \begin{itemize}
+            \item Content-centric
+            \item Math typesetting
+            \item Looks professional
+            \item Reuse \LaTeX\ you wrote earlier
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{file_extensions}
+        \tiny{Randall Munroe, ``File Extensions'', \url{https://xkcd.com/1301/}}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{fragileframe}{Beamers 101}
+Instead of \tt{article}, the first lines goes:
+\begin{lstlisting}
+\documentclass{beamer}
+\end{lstlisting}
+Then metadata:
+\begin{lstlisting}
+\title{\LaTeX\ workshop: Beamers}
+\author{Frederick Yin}
+\institute{TechJI}
+\date{2023}
+\end{lstlisting}
+Then the document:
+\begin{lstlisting}
+\begin{document}
+% frames
+\end{document}
+\end{lstlisting}
+\if\pre1\pause\fi
+\begin{diy}{1}
+    In \tt{diy.tex}, fill in your name, then compile.
+\end{diy}
+\end{fragileframe}
+
+\begin{fragileframe}{Frames}
+A beamer is made of many \bf{frames}:
+\begin{lstlisting}
+\begin{frame}{Title}
+    Frame content
+\end{frame}
+\end{lstlisting}
+Or alternatively
+\begin{lstlisting}
+\begin{frame}
+    \frametitle{Title}
+    Frame content
+\end{frame}
+\end{lstlisting}
+\end{fragileframe}
+
+\section{Multicolumn}
+\begin{fragileframe}{Multicolumn}
+\begin{columns}
+    \begin{column}{0.5\textwidth}
+\begin{lstlisting}
+\begin{columns}
+    \begin{column}{0.5\textwidth}
+        % ...
+    \end{column}
+    \begin{column}{0.3\textwidth}
+        And that's how this frame
+        was made!
+    \end{column}
+\end{columns}
+\end{lstlisting}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+        And that's how this frame was made!
+        \begin{block}{Note}
+            This is a \tt{beamer} feature, \bf{not} the same thing as
+            the \tt{multicols} environment in an article.
+        \end{block}
+    \end{column}
+\end{columns}
+\end{fragileframe}
+
+\begin{fragileframe}{Alignment option}
+\begin{columns}[t]
+    \begin{column}{0.5\textwidth}
+        Add option \tt{t} to top-align:
+\begin{lstlisting}
+\begin{columns}[t]
+    \begin{column}{0.5\textwidth}
+        % ...
+    \end{column}
+    \begin{column}{0.3\textwidth}
+        % ...
+    \end{column}
+\end{columns}
+\end{lstlisting}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+        All options:
+        \begin{itemize}
+            \item \tt{c} --- center
+            \item \tt{t} --- top
+            \item \tt{T} --- different top
+                \footnote[frame]{See section 12.7 of \tt{beamer} docs.}
+            \item \tt{b} --- bottom
+        \end{itemize}
+    \end{column}
+\end{columns}
+\if\pre1\pause\fi
+\begin{diy}{2}
+    Divide frame ``
+    $\Box\Box\Box\Box,\Box\Box\langle\langle\Box\Box\rangle\rangle$
+    '' into two columns.
+\end{diy}
+\end{fragileframe}
+
+\section{Sections}
+\begin{fragileframe}{Sections}
+Use sections to outline your presentation.
+\begin{lstlisting}
+\section{}
+% Frames
+\subsection{}
+% More frames
+\end{lstlisting}
+\begin{diy}{3}
+    Group the lab report into sections, then compile and observe.
+\end{diy}
+\end{fragileframe}
+
+\begin{fragileframe}{Table of Contents}
+Insert this frame where you want a Table of Contents
+(usually right after title page):
+\begin{lstlisting}
+\begin{frame}{Table of Contents}
+    \tableofcontents
+\end{frame}
+\end{lstlisting}
+
+\if\pre1\pause\fi
+Or automatically insert one before each section:
+\begin{lstlisting}
+\AtBeginSection[]{
+    \begin{frame}{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+\end{lstlisting}
+(In the preamble, before beginning of document)
+\end{fragileframe}
+
+\section{Blocks}
+\begin{fragileframe}{Blocks}
+Some block environments always need a title:
+\begin{block}{Like this default block}
+\begin{lstlisting}
+\begin{block}{Like this default block}
+\end{block}
+\end{lstlisting}
+\end{block}
+
+\begin{alertblock}{Or this alertblock}
+\begin{lstlisting}
+\begin{alertblock}{Or this alertblock}
+\end{alertblock}
+\end{lstlisting}
+\end{alertblock}
+
+\end{fragileframe}
+
+\begin{fragileframe}{Blocks}
+Others have a default title, but you can elaborate:
+\begin{example}
+    This example does not tell you what it's about…
+\begin{lstlisting}
+\begin{example}
+\end{example}
+\end{lstlisting}
+\end{example}
+
+\begin{example}[with a description]
+    But this one does!
+\begin{lstlisting}
+\begin{example}[with a description]
+\end{example}
+\end{lstlisting}
+\end{example}
+\end{fragileframe}
+
+\begin{fragileframe}{Blocks}
+Apart from \tt{example}, we have \tt{examples}, \tt{definition},
+\tt{definitions}, \tt{theorem}, \tt{proof}, and \tt{corollary},
+with similar syntax.
+\begin{lstlisting}
+\begin{something}[optional description]
+    % Block content
+\end{something}
+\end{lstlisting}
+
+\begin{diy}{4}
+    Put each paragraph in a block you think is suitable.
+\end{diy}
+\end{fragileframe}
+
+\section{Overlays}
+\begin{fragileframe}{Pauses}
+``Overlay'' is just a fancy way of saying ``hiding part of the frame''.
+The simplest way is \verb|\pause|:
+\begin{lstlisting}
+\begin{frame}
+    \begin{itemize}
+        \item To be, or --- next slide, please ---
+        \pause
+        \item not to be, that is the question.
+    \end{itemize}
+\end{frame}
+\end{lstlisting}
+\if\pre1\pause\fi
+\only<2>{Slide 1}
+\only<3>{Slide 2}
+\begin{itemize}
+    \item To be, or --- next slide, please ---
+    \pause
+    \item not to be, that is the question.
+\end{itemize}
+\if\pre1\pause\fi
+\bf{Problem: not very customizable}
+\end{fragileframe}
+
+\begin{fragileframe}{Overlay specifications}
+\bf{Solution: ``overlay specifications'' (aka angle brackets)}
+\onslide<2->
+\begin{lstlisting}
+\begin{frame}
+    \begin{itemize}
+        \item<1> Shall I compare thee to a summer's day? Thou art
+            --- next slide, please ---
+        \item<2-> more lovely, and --- next slide, please ---
+        \item<3-> more temperate.
+    \end{itemize}
+\end{frame}
+\end{lstlisting}
+\only<3>{Slide 1}
+\only<4>{Slide 2}
+\only<5>{Slide 3}
+\begin{itemize}
+    \item<3,6> Shall I compare thee to a summer's day? Thou art
+        --- next slide, please ---
+    \item<4-> more lovely, and --- next slide, please ---
+    \item<5-> more temperate.
+\end{itemize}
+\onslide<6>\bf{Problem: requires manual work, even for simplest effect}
+\end{fragileframe}
+
+\begin{fragileframe}{Incremental specifications}
+Author of \tt{beamer} knew this, and came up with
+\bf{incremental specifications}:
+\if\pre1\pause\fi
+\begin{lstlisting}
+\begin{frame}
+    \begin{itemize}
+        \item<+-> ...
+        \item<+-> ...
+    \end{itemize}
+\end{frame}
+\end{lstlisting}
+\if\pre1\pause\fi
+\only<3>{Slide 1}
+\only<4>{Slide 2}
+\only<5>{Slide 3}
+\begin{itemize}
+    \item<+-> It is a truth universally acknowledged, that a single man
+        in possession of --- next slide, please ---
+    \item<+-> a good fortune, must be in want of --- next slide, please ---
+    \item<+-> a wife.
+\end{itemize}
+\onslide<6>\bf{Problem: even this is too much work}
+\end{fragileframe}
+
+\begin{fragileframe}{Incremental specifications}
+\bf{They knew.}
+\if\pre1\pause\fi
+The previous example is equivalent to
+\begin{lstlisting}
+\begin{frame}
+    \begin{itemize}[<+->]
+        \item ...
+        \item ...
+    \end{itemize}
+\end{frame}
+\end{lstlisting}
+\end{fragileframe}
+
+\begin{fragileframe}{\tt{<+->} explained}
+How does \tt{<+->} work?
+\begin{itemize}
+    \item Counter called \tt{beamerpauses}
+    \item \verb|\pause| adds 1 to \tt{beamerpauses}
+    \item Things like \verb|<2->| do not
+    \item \verb|+| expands to current value of \tt{beamerpauses}, then adds 1
+    \item \verb|<+->| expands to \verb|<1->|, \verb|<2->|, etc
+    \item Unless you \verb|\pause|d
+\end{itemize}
+\if\pre1\pause\fi
+\begin{diy}{5}
+    Follow instructions in \tt{diy.tex} to create your own overlays.
+\end{diy}
+\end{fragileframe}
+
+\section{Lifehacks}
+\begin{fragileframe}{Aspect ratio}
+Beamers are 4:3 by default. Switch to 16:9 with
+\begin{lstlisting}
+\documentclass[aspectratio=169]{beamer}
+\end{lstlisting}
+Page size (mm):
+\begin{itemize}
+    \item 4:3 --- 128$\times$96
+    \item 16:9 --- 160$\times$90
+\end{itemize}
+This means vertical content \textit{might} overflow.
+Better settle on an aspect ratio from the beginning.
+\end{fragileframe}
+
+\begin{fragileframe}{Formulas}
+Works as you would expect in an article, except:
+\begin{columns}
+    \begin{column}{0.4\textwidth}
+        \begin{block}{Consistent}
+\begin{lstlisting}
+\int x^2 \mathsf{d} x
+\end{lstlisting}
+            \[
+                \int x^2 \mathsf{d} x
+            \]
+        \end{block}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \begin{block}{Not so much}
+\begin{lstlisting}
+\int x^2 \mathrm{d} x
+\end{lstlisting}
+            \[
+                \int x^2 \mathrm{d} x
+            \]
+        \end{block}
+    \end{column}
+\end{columns}
+\tt{rm} = \textrm{Roman}; \tt{sf} = \textsf{sans-serif}
+\begin{block}{Dirty hack}
+    Too many \verb|\mathrm|s to replace? Try
+\begin{lstlisting}
+\renewcommand{\mathrm}{\mathsf}
+\end{lstlisting}
+\end{block}
+\end{fragileframe}
+
+\begin{fragileframe}{Fragile frames}
+If you include code, you have to tell \tt{beamer} that this frame is
+``fragile''.
+\begin{lstlisting}
+\begin{frame}[fragile]
+    % Content that contains code
+\end{frame}
+\end{lstlisting}
+\end{fragileframe}
+
+\begin{fragileframe}{Remove navigation symbols}
+In the bottom right of your DIY slides are the navigation symbols:
+\includegraphics[height=1cm]{nav}
+
+This line removes them:
+\begin{lstlisting}
+\setbeamertemplate{navigation symbols}{}
+\end{lstlisting}
+
+Why?
+\begin{itemize}
+    \item Distracting clutter
+    \item Manuel hates them
+    \item Have you ever \textit{used} it?
+\end{itemize}
+\end{fragileframe}
+
+\begin{frame}{Further reading / References}
+\begin{itemize}
+    \item The \tt{beamer} user guide:
+        \url{http://mirrors.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf}
+    \begin{itemize}
+        \item Multicolumn: \S 12.7
+        \item Sections: \S 10.2
+        \item Blocks: \S 12.3
+        \item Overlays: \S 9
+    \end{itemize}
+    \item \LaTeX\ workshop by Liu Yihao:
+        \url{https://github.com/SJTU-UMJI-Tech/LaTeX/blob/master/build/c5_beamer.pdf}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\Huge{Thanks!}
+\end{frame}
+\end{document}
